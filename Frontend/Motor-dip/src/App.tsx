@@ -1,4 +1,5 @@
 import { CarSelectionPage } from "./pages/CarSelectionPage"
+import { DetailsPage } from "./pages/DetailsPage";
 import { HomePage } from "./pages/HomePage"
 
 
@@ -6,7 +7,8 @@ import { HomePage } from "./pages/HomePage"
 
 function App() {
 
-  return <CarSelectionPage></CarSelectionPage>
+  return <DetailsPage/>
+
 }
 
 export default App
