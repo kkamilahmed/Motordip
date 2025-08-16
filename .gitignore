@@ -1,3 +1,6 @@
+# Ignore node_modules in Backend
 Backend/node_modules/
+
+# Ignore sensitive service files
 Backend/src/Services/credentials.json
 Backend/src/Services/token.json
