@@ -7,7 +7,7 @@ import { HomePage } from "./pages/HomePage"
 
 function App() {
 
-  return <DetailsPage/>
+  return <CarSelectionPage/>
 
 }
 
