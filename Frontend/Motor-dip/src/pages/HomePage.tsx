@@ -4,12 +4,14 @@ import redLogoSrc from "../assets/redLogo.png";
 import black from "../assets/blackcar.png";
 import white from "../assets/whitecar.png";
 import blue from "../assets/blue.png";
+import { useNavigate } from "react-router-dom";
 
 import {
   BeforeAfterSliderE,
   BeforeAfterSliderW,
 } from "../components/BeforeAfterSlider";
 import { Gallery } from "../components/Gallery";
+import { Button } from "../components/Button";
 
 const images = [
   {
@@ -43,7 +45,7 @@ const images = [
 
 
 export function HomePage() {
-  
+    const navigate = useNavigate();
 
   return (
     <div>
@@ -61,9 +63,10 @@ export function HomePage() {
 
         <div className="absolute inset-0 flex flex-col pt-5 pl-6 font-Bebas text-white z-20">
           <img src={redLogoSrc} className="w-30 mb" />
-          <div className="pt-20">
-            <div className="text-8xl">PREMIUM</div>
-            <div className="text-8xl">CAR CARE</div>
+          <div className="pt-10">
+            <div className="text-9xl">PREMIUM</div>
+            <div className="text-9xl">CAR CARE</div>
+            <Button on={() => navigate("/car")} text="Book Now"></Button>
           </div>
         </div>
       </div>

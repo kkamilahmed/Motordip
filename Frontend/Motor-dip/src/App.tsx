@@ -1,16 +1,21 @@
 import { CarSelectionPage } from "./pages/CarSelectionPage"
 import { DetailsPage } from "./pages/DetailsPage";
 import { HomePage } from "./pages/HomePage"
-
-
+import { PackagePage } from "./pages/PackagePage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
-
-  return <CarSelectionPage/>
-
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/car" element={<CarSelectionPage />} />
+        <Route path="/choose" element={<PackagePage/>} />
+        <Route path="/book" element={<DetailsPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
-
- 
+export default App;
