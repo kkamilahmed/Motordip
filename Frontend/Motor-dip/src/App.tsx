@@ -1,3 +1,4 @@
+import { AddOnsPage } from "./pages/AddOnsPage";
 import { CarSelectionPage } from "./pages/CarSelectionPage"
 import { DetailsPage } from "./pages/DetailsPage";
 import { HomePage } from "./pages/HomePage"
@@ -11,8 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/car" element={<CarSelectionPage />} />
-        <Route path="/choose" element={<PackagePage/>} />
+        <Route path="/choose" element={<PackagePage />} />
         <Route path="/book" element={<DetailsPage />} />
+        <Route path="/addon" element={<AddOnsPage />} />
       </Routes>
     </Router>
   );

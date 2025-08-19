@@ -6,7 +6,7 @@ import dirtyi from "../assets/dirtyl.png";
 
 export  function BeforeAfterSliderE() {
   return (
-    <div style={{ width: "550px", margin: "auto"}} className="rounded-5xl">
+    <div style={{ width: "350px", margin: "auto"}} className="rounded-5xl">
       <ReactCompareImage
         leftImage={dirty}
         rightImage={clean}
@@ -18,7 +18,7 @@ export  function BeforeAfterSliderE() {
 
 export  function BeforeAfterSliderW() {
   return (
-    <div style={{ width: "550px", margin: "auto"}} className="rounded-5xl">
+    <div style={{ width: "350px", margin: "auto"}} className="rounded-5xl">
       <ReactCompareImage
         leftImage={dirtyi}
         rightImage={cleani}

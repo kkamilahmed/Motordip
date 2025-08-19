@@ -63,54 +63,54 @@ export function HomePage() {
 
         <div className="absolute inset-0 flex flex-col pt-5 pl-6 font-Bebas text-white z-20">
           <img src={redLogoSrc} className="w-30 mb" />
-          <div className="pt-10">
-            <div className="text-9xl">PREMIUM</div>
-            <div className="text-9xl">CAR CARE</div>
+          <div className="flex flex-col pt-22">
+            <div className="text-8xl">PREMIUM</div>
+            <div className="text-8xl">CAR CARE</div>
             <Button on={() => navigate("/car")} text="Book Now"></Button>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-16 m-5">
+      <div className="flex justify-center items-center gap-12 p-10">
         <div className="font-Bebas flex flex-col items-center gap-0  ">
-          <div className="text-9xl text-red-600 ">5</div>
-          <div className="text-2xl -mt-4 ">Years of Service</div>
+          <div className="text-8xl  text-red-600">5+</div>
+          <div className="text-xl -mt-4 ">Services</div>
         </div>
         <div className="font-Bebas flex flex-col items-center gap-0  ">
-          <div className="text-9xl  text-red-600">5</div>
-          <div className="text-2xl -mt-4 ">Years of Service</div>
+          <div className="text-8xl  text-red-600">100</div>
+          <div className="text-xl -mt-4 ">Years of Service</div>
         </div>
         <div className="font-Bebas flex flex-col items-center gap-0  ">
-          <div className="text-9xl  text-red-600">5</div>
-          <div className="text-2xl -mt-4 ">Years of Service</div>
+          <div className="text-8xl  text-red-600">4</div>
+          <div className="text-xl -mt-4 ">Locations</div>
         </div>
       </div>
-      <div className="font-Bebas text-7xl text-red-600 flex justify-center items-center p-5">
+      <div className="font-Bebas text-6xl text-red-600 flex justify-center items-center p-5">
         Services Offered
       </div>
 
       <div className="py-7 flex flex-col items-center justify-center gap-2">
         <BeforeAfterSliderE></BeforeAfterSliderE>
-        <div className="bg-red-600 text-white font-Bebas w-137.5 h-13 text-5xl flex justify-center items-center p-9">
+        <div className="bg-red-600 text-white font-Bebas w-87 h-13 text-4xl flex justify-center items-center p-9">
           Exterior Detailing
         </div>
       </div>
       <div className="py-7 flex flex-col items-center justify-center gap-2">
         <BeforeAfterSliderW></BeforeAfterSliderW>
-        <div className="bg-red-600 text-white font-Bebas w-137.5 h-13 text-5xl flex justify-center items-center p-9">
+        <div className="bg-red-600 text-white font-Bebas  w-87 h-13 text-4xl flex justify-center items-center p-9">
           interior Detailing
         </div>
       </div>
 
       <div className="py-7 flex flex-col items-center justify-center gap-2">
         <BeforeAfterSliderE></BeforeAfterSliderE>
-        <div className="bg-red-600 text-white font-Bebas w-137.5 h-13 text-5xl flex justify-center items-center p-9">
-          Exterior Detailing
+        <div className="bg-red-600 text-white font-Bebas  w-87 h-13 text-4xl flex justify-center items-center p-9">
+          Chrome Deletion
         </div>
       </div>
       <div className="py-7 flex flex-col items-center justify-center gap-2">
         <BeforeAfterSliderW></BeforeAfterSliderW>
-        <div className="bg-red-600 text-white font-Bebas w-137.5 h-13 text-5xl flex justify-center items-center p-9">
+        <div className="bg-red-600 text-white font-Bebas  w-87 h-13 text-4xl flex justify-center items-center p-9">
           interior Detailing
         </div>
       </div>

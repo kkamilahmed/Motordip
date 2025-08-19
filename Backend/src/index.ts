@@ -1,5 +1,5 @@
 import express from "express";
-import { authorize, listEvents } from "./Services/calendar.js";
+import { authorize, listEvents, updateEventSummary} from "./Services/calendar.js";
 import cors from "cors"
 
 const app = express();
@@ -37,6 +37,19 @@ app.get("/events", async (req, res) => {
   } catch (err: any) {
     console.error(err);
     res.status(500).send(err.message);
+  }
+});
+
+
+app.post("/events", async (req, res) => {
+  try {
+    const auth = await authorize();
+    const { eventId, newSummary } = req.body; // better to use req.body for POST
+    const updatedEvent = await updateEventSummary(auth, eventId, newSummary);
+    res.status(200).json(updatedEvent);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to update event" });
   }
 });
 

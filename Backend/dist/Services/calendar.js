@@ -1,9 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
-import { google, Auth } from "googleapis";
+import { google, Auth, calendar_v3 } from "googleapis";
 const CREDENTIALS_PATH = path.join(process.cwd(), "src/services/credentials.json");
 const TOKEN_PATH = path.join(process.cwd(), "src/services/token.json");
-const SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
+const SCOPES = ["https://www.googleapis.com/auth/calendar.events"];
 let client = null;
 async function initClient() {
     if (client)
@@ -58,8 +58,26 @@ export async function listEvents(auth, tMin, tMax) {
     });
     const events = res.data.items || [];
     return events.map((e) => ({
+        id: e.id,
         start: e.start?.dateTime || e.start?.date,
         summary: e.summary,
     }));
+}
+export async function updateEventSummary(auth, eventId, newSummary) {
+    const calendarId = "36f8f624f2dfdabe56dbb72c4971e1c3367fc05976c22093258d3269a5adff89@group.calendar.google.com";
+    const calendar = google.calendar({ version: "v3", auth });
+    const { data: event } = await calendar.events.get({
+        calendarId,
+        eventId,
+    });
+    const updatedEvent = await calendar.events.update({
+        calendarId,
+        eventId,
+        requestBody: {
+            ...event,
+            summary: newSummary,
+        },
+    });
+    return updatedEvent.data;
 }
 //# sourceMappingURL=calendar.js.map

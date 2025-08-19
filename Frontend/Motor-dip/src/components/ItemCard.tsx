@@ -5,7 +5,7 @@ import { useState } from "react";
 interface itemCardP {
   title: string;
   desc: string;
-  itemsB: string[];
+  itemsB?:  string[];
   itemsI: string[];
   price: string;
   img : string
@@ -16,7 +16,7 @@ export function ItemCard({ title, desc, itemsB, itemsI, price,img}: itemCardP) {
 
   return (
     <div
-      className="relative flex flex-col justify-between items-start w-135 p-5 overflow-hidden  shadow-lg"
+      className="relative flex flex-col justify-between items-start w-90 p-5 overflow-hidden  shadow-lg"
       style={{
         backgroundImage: `url(${img})`,
         backgroundSize: "cover",
@@ -61,7 +61,7 @@ export function ItemCard({ title, desc, itemsB, itemsI, price,img}: itemCardP) {
 
             <p>Benefit:</p>
             <ul className="list-disc ml-5">
-              {itemsB.map((item, index) => (
+              {itemsB?.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
